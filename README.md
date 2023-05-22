@@ -1,1 +1,117 @@
-# project
+# 🥗 project (프로젝트)
+
+<br>
+<div align="center">
+    <img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=for-the-badge&logo=IntelliJ IDEA&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>
+    <img src="https://img.shields.io/badge/spring boot-6DB33F?style=for-the-badge&logo=spring boot&logoColor=white"/>
+    <img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=spring security&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white"/>
+</div>
+<div align="center">
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/>
+    <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+    <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+    <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+    <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+</div>
+<div align="center">
+    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"/>
+    <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=aws&logoColor=white"/>
+</div> 
+
+<br>
+
+
+
+## 💁 프로젝트 정보
+
+### 👉 미리보기 이미지 및 요청 URL  
+- Cleint : https://saladbanklink.netlify.app/
+- Server : https://saladbank.link/
+<br><br>
+<img src="https://velog.velcdn.com/images/wijoonwu/post/11440b84-6663-4f14-bc4f-452441f32ca0/image.png" width="400" heigth="600">
+
+### 📜 요구사항 명세서
+- https://mango-tower-9f1.notion.site/7670e6d5a49d489f806ea2fb271d4fcb
+### 🏋️‍♀️ 프로젝트 기간
+- 25/08/24 ~ 25/09/06 (13일)
+### 💬 프로젝트 설명
+> 회원의 정보(나이,취미,소득,직업)에 따라 맞춤형 금융상품(대출,카드)을 추천해주는 금융 플랫폼입니다.
+
+
+## 🔙 팀구성 및 담당 역할
+### 🧑🏻‍💻 팀장
+- JWT와 시큐리티를 사용한 로그인/회원가입 기능 구현
+- 조건에 따른 금융상품 검색결과 조회 기능 구현
+### 👩🏻‍💻 팀원
+- 회원별 관심상품 등록,삭제,조회 기능 구현
+- 회원별 장바구니 등록,삭제, 조회 기능 구현
+- AWS를 이용한 EC2 서버 배포
+
+## 💻 개발 환경
+- IDE : intelliJ IDEA
+- JDK : java 11
+- Project : Gradle 7.5
+- Spring Boot : 2.7.3
+- DataBase : MySQL 8.0.30
+- EC2 Instance free tier
+- Amazon Linux2 kerner 5.10
+
+## 🌱 Dependency
+- Spring Web
+- Spring Dev Tools
+- Lombok
+- Spring Data JPA
+- Spring Security
+- Swagger
+- JWT
+
+
+## 💾 DB 다이어그램
+<img src="https://media.discordapp.net/attachments/1009428199341555772/1016325137580167199/unknown.png?width=695&height=637">
+
+## 🕋 패키지 구조 
+- main
+    - biz
+        - domain : Entity
+        - repository
+        - service
+    - web
+        - controller
+        - dto : Request, Response 객체
+
+## 📡 API 명세서
+- http://3.34.229.74/swagger-ui/index.html#/loan-controller
+### ✅ 로그인/회원가입
+- `GET` /duplicate
+- `POST` /register
+- `POST`  /login
+- `GET` /do-logout
+### 🧺 장바구니
+- `DELETE` /carts
+- `DELETE` /carts/card/{id}
+- `DELETE` /carts/loan/{id}
+- `POST` /carts/card
+- `POST` /carts/loan
+- `GET` /carts/card
+- `GET` /carts/loan
+### ⭐️ 관심상품
+- `DELETE` /favorites
+- `DELETE` /favorites/card/{id}
+- `DELETE` /favorites/loan/{id}
+- `POST` /favorites/card
+- `POST` /favorites/loan
+- `GET` /favorites/card
+- `GET` /favorites/loan
+### 👩🏻‍🦱 회원관리
+- `GET` /members/my-page
+- `GET` /members/recommendation
+- `GET` /members/edit
+- `PUT` /members/edit
+### 🎁 상품관리
+- `GET` /products
+- `GET` /products/{id}
+- `GET` /products/search
+- `GET` /cards
+- `GET` /loans
